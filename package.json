@@ -1,0 +1,22 @@
+{
+  "name": "serverless-i",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anandcsekaran/serverless-i.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anandcsekaran/serverless-i/issues"
+  },
+  "homepage": "https://github.com/anandcsekaran/serverless-i#readme",
+  "devDependencies": {
+    "serverless-offline": "^5.0.1"
+  }
+}

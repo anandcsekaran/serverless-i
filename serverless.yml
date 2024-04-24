@@ -1,0 +1,24 @@
+service: anand-serverless-i
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  anandapi:
+    handler: index.handler #entry point of this function
+    events:
+      - httpApi:
+          path: /
+          method: get
+
+  anandpost:
+    handler: index.handlerpost #entry point of this function
+    events:
+      - httpApi:
+          path: /anand
+          method: post
+
+plugins:
+  - serverless-offline
