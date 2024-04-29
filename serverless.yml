@@ -23,6 +23,18 @@ functions:
       - httpApi:
           path: /anandpost
           method: post
+      - sqs:
+          arn:
+            Fn::GetAtt:
+              - AnandQueue
+              - Arn
+  
+resources:
+  Resources:
+    AnandQueue:
+      Type: "AWS::SQS::Queue"
+      Properties:
+        QueueName: "anand-queue"
 
 plugins:
   - serverless-offline
