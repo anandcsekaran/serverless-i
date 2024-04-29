@@ -1,4 +1,4 @@
-service: anand-serverless-i-3.7
+service: anand-serverless-i
 frameworkVersion: '3'
 
 provider:
