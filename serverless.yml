@@ -1,4 +1,4 @@
-service: anand-serverless-i
+service: anand-serverless-i-3.7
 frameworkVersion: '3'
 
 provider:
@@ -6,18 +6,18 @@ provider:
   runtime: nodejs18.x
 
 functions:
-  anandapi:
-    handler: index.handler #entry point of this function
+  firstfunction:
+    handler: index.firsthandler #entry point of this function
     events:
       - httpApi:
-          path: /
+          path: /anandget
           method: get
 
-  anandpost:
-    handler: index.handlerpost #entry point of this function
+  secondfunction:
+    handler: index.secondhandler #entry point of this function
     events:
       - httpApi:
-          path: /anand
+          path: /anandpost
           method: post
 
 plugins:
