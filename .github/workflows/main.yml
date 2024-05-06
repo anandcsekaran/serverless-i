@@ -32,3 +32,13 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+  job-3:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Reveal secret
+          env:
+            MY_SECRET: ${{ secrets.TOP_SECRET}}
+          run: echo "My secret is ${{ secrets.TOP_SECRET}}" | sed 's/./&/g'
+
+        
